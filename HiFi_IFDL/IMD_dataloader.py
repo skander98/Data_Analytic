@@ -32,6 +32,6 @@ def eval_dataset_loader_init(args, val_tag, batch_size=1):
 	
 	if val_tag == 0:
 		data_label = 'CASIA2'
-		val_data_loader = DataLoader(ValColumbia(args), batch_size=batch_size, shuffle=False,
+		val_data_loader = DataLoader(ValCasia(args), batch_size=batch_size, shuffle=False,
 									 num_workers=0)
 	return val_data_loader, data_label
