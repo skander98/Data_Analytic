@@ -154,7 +154,7 @@ def main(args):
     ## Set up the loss function.
     center, radius = load_center_radius(args, FENet, SegNet, 
                                         train_data_loader=None, 
-                                        center_radius_dir='./center_loc')
+                                        center_radius_dir='Data_Analytic/HiFi_IFDL/center_loc')
     CE_loss  = nn.CrossEntropyLoss().to(device)
     BCE_loss = nn.BCELoss(reduction='none').to(device)
     LOSS_MAP = IsolatingLossFunction(center,radius).to(device)
